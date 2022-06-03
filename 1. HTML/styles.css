@@ -70,12 +70,12 @@ h3 {
 
 #buton1{
     background-color: violet;
-    font size: 35px;
+    font-size: 35px;
     border: 5px purple solid;
 }
 
 #buton1:hover{
-    bacground-color: aqua;
+    background-color: aqua;
 }
 
 #botones:hover{
