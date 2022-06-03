@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+}
+
+#static{
+    background-color: red;
+    position: static;
+    top: 10px;
+
+}
+
+#relative{
+    background-color: yellow;
+    position: relative;
+    top:20px;
+
+}

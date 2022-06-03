@@ -1,0 +1,27 @@
+body{
+    font-family: arial;
+}
+
+/*ESTILOS GENERALES*/
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav ul ul{
+    display: none;
+}
+
+
+/*PRIMER NIVEL*/
+
+
+
+/*SEGUNDO NIVEL*/
+
+
+/*TERCER NIVEL*/ 

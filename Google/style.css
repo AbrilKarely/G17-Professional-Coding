@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+ul{
+    list-style: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+ul li span{
+    vertical-align: middle;
+
+}
+
+#li-icono{
+    padding: 5px;
+}
+
+#li-icono:hover{
+    background-color: rgb(235, 235, 235);   
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul li{
+    padding: 10px 30px;
+    font-size: 15px;
+}
+
+ul li button{
+    padding: 10px 30px;
+    font-size: 15px;
+    color: white;
+    background-color: #1a73e8;
+    border-radius: 4px;
+    border: none;
+}
+
+.main-section{
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+
+.main-section img{
+    width: 270px;
+}
+
+#input-busqueda{
+    width: 500px;
+    padding: 15px 15px;
+    border: none;
+}
+
+#barra-busqueda:hover{
+    border: 1px solid rgb(197, 197,197);
+    margin: auto;
+    border-radius: 50px;
+    width: 600px;
+    margin-top: 25px;
+
+}
+
+#barra-busqueda{
+    box-shadow: 2px 2px 4px 3px rgb(208, 208, 208, 0.2);
+}
+
+#barra-busqueda span{
+    vertical-align: middle;
+}
+
+#input-busqueda:focus{
+    outline: none;
+}
+
+#botones{
+    margin-top: 30px;
+}
+
+#botones button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #3c4043;
+    margin-right: 8px;
+}
+
+#botones button:hover{
+    border: 1px solid #dfe3e7;
+}
