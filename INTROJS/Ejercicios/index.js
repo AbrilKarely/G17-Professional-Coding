@@ -22,14 +22,15 @@
 // muestre el mensaje “es vocal”. Se debe validar que el usuario ingrese sólo un carácter. 
 // Si ingresa un string de más de un carácter, informarle que no se puede procesar el dato.
 
-//var letra = prompt("escribe una letra").toLocaleLowerCase
+//var letra = prompt("escribe una letra").toLocaleLowerCase();
+//var longi = letra.length;
 
-//if(letra == "a" || "e" || "i" || "o" || "u"){
-    //document.write ("es una vocal");
-//}//
-
-//if (letra.length = 1){
-    //document.write ("no es una vocal")
+//if(letra == "a"||letra == "e"||letra == "i" ||letra == "o"||letra == "u"){
+    //document.write ("Es una vocal")
+//} else if (longi >1){
+    //document.write ("No se puede procesar, recarga tu página")
+//}else if (letra != "a"|| letra !="e"|| letra!="i"|| letra!="o"|| letra!="u"){
+    //document.write ("No es una vocal")
 //}//
 
 
@@ -39,16 +40,19 @@
 // se le debe imprimir el mensaje “Usted ha votado por el partido [color que corresponda al candidato elegido]”. Si el usuario ingresa una  
 // opción que no corresponde a ninguno de los candidatos disponibles, indicar “Opción errónea”.
 
-//var partido = prompt ("Vota por el partido de tu preferencia, A por el rojo, B por el verde, C por el azul").toLocaleLowerCase()
-//var rojo = "a"
-//var verde = "b"
-//var azul = "c"
-//if(partido == "rojo"){
+//var partido = prompt ("Vota por el partido de tu preferencia, A por el rojo, B por el verde, C por el azul").toLocaleLowerCase();
+//var a = "rojo"
+//var b = "verde"
+//var c = "azul"
+
+//if(partido == "a"){
     //document.write("Usted a vitado por el partido rojo")
-//} else if(partido == "verde"){
+//} else if(partido == "b"){
     //document.write("usted ha votado por el partido verde")
-//}else if (partido == "azul"){
+//}else if (partido == "c"){
     //document.write ("Usted ha votado por el partido azul")
+//} else if (partido == ""){
+    //document.write ("Opción erronea")
 //}//
 
 
@@ -62,17 +66,30 @@
 // » y a continuación informar del precio del helado sin ningún topping.
 // Finalmente, el programa escribe por pantalla el precio del helado con el topping seleccionado (o ninguno).
 
-//let helado = prompt ("Selecciona el helado de tu preferencia").toLocaleLowerCase;
+//var topping = prompt ("Selecciona el helado de tu preferencia").toLocaleLowerCase();
 
-//let no = "1.90"
-//let oreo = "1"
-//let kitkat = "1.50"
-//let brownie = "0.75"
-//let lacasitos = "0.95"
+//var ninguno = "1.90€"
+//var oreo = "1€"
+//var kitkat = "1.50€"
+//var brownie = "0.75€"
+//var lacasitos = "0.95€"
 
-//if(helado == ""){
-    //document.write ()
+//if(topping == "oreo"){
+    //document.write ("El precio del helado de oreo es 1.90€")
+//}else if (topping == "kitkat")
+//document.write ("El precio del helado de Kitkat es de 1.50€")
+//else if (topping == "brownie"){
+    //document.write ("El helado de brownie cuesta 0.75€")
+//} else if (topping == "lacasitos"){
+    //document.write ("El helado de lacasitos cuesta 0.95€")
+//}else if (topping == "ninguno"){
+    //document.write ("El precio de su helado es de 1.90€")
+//} else if (topping == ""){
+    //document.write ("Por favor ingresa un topping de tu preferencia")
+//7} else if (topping != "oreo"|| topping != "kitkat" || topping !="brownie"|| topping !="lacasitos"|| topping!= "ninguno"){
+    //document.write ("No tenemos ese topping, lo sentimos" + " el helado sin topping cuesta 1.90€")
 //}//
+
 
 
 
@@ -85,31 +102,31 @@
 
 
 // solicitar datos!
-var nombre = "joel"
-var apellidos = "Lozano"
-var balance = 200
-var deuda = 400
-var pagoMixto = true // false
-var pais = "Peru"
-var taxes;
+//var nombre = "joel"
+//var apellidos = "Lozano"
+//var balance = 200
+//var deuda = 400
+//var pagoMixto = true // false
+//var pais = "Peru"
+//var taxes;
 
 
-if (pais == "peru" || pais == "basil"){ // Si usuario != México, taxes = 18.5
-    taxes = 18.5
-    var subTotal = deuda * 0.185
-    var total = deuda + impuesto
-    document.write ("el total es: " + total)
-} else {
-    document.write ("el total es: " + deuda)
-}
+//if (pais == "peru" || pais == "basil"){ // Si usuario != México, taxes = 18.5
+    //taxes = 18.5
+    //var subTotal = deuda * 0.185
+    //var total = deuda + impuesto
+    //document.write ("el total es: " + total)
+//} else 
+    //document.write ("el total es: " + deuda)
+//}//
 
-if(deuda > balance && pagoMixto){
-    document.write("Debe acompletar mi pago con otro medio. (tarjeta, deposito)")
-} else if (deuda > balance && pagoMixto){ // !=true){
-    document.write ("Haz un deposito a tu cuenta")
-} else if (deuda < balance && pagoMixto){
-    document.write ("tienes dinero suficiente, paga con tu balance")
-}
+//if(deuda > balance && pagoMixto){
+    //document.write("Debe acompletar mi pago con otro medio. (tarjeta, deposito)")
+//} else if (deuda > balance && pagoMixto){ // !=true){
+    //document.write ("Haz un deposito a tu cuenta")
+//} else if (deuda < balance && pagoMixto){
+    //document.write ("tienes dinero suficiente, paga con tu balance")
+//}//
 
 
 
