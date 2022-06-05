@@ -129,13 +129,41 @@
 //}//
 
 
-
-// 
 // Dependiendo el pais  cambia el impuesto. 
 // en Mexico no se cobra impuestos
 // peru y brazil se cobra. impuesto del 18.5%
 // debe mostrar el subttotal y el total a pagar. 
 
 
+//Ejercicio fin de semana//
+// Crear un programa que evalue 
+// Cuanta probabilidad tenemos de padecr covid. 
+// 1.- Nombre de la persona
+// 2.- Edad 
+// 3.- ¿cuentas con vacunas? 
+// 4.- Sintoma 1.- Dolor de cabeza
+// 5.- Sintoma 2.- Dolor de cuerpo
+// 6.- Sintoma 3.- Temperatura   
+// Evaluar 
+// 1.- Si la persona tiene dolor de cabeza y dolor de cuerpo y esta vacunado y no presenta Fiebre, tendra un 55% probalidad de padecer covid.
+// 2.- Si la persona tiene dolor de cabeza o dolor de cuerpo y presenta una temperatura > 37.5  tiene una probabilidad de 70%
+// 3.- si presenta todos los sintomas  pues tiene un 95% 
+// considerar que fiebre se considera mayor a 37
 
+var nombre = prompt ("¿Cuál es tu nombre?");
+var edad = prompt ("¿Cuál es tu edad?");
+var vacunas = prompt ("Responde si/no ¿Cuentas con vacunas?").toLocaleLowerCase();
+var sintomaCabeza = prompt ("Responde si/no ¿tienes dolor de cabeza?").toLocaleLowerCase();
+var sintomaCuerpo = prompt ("¿Responde si/no ¿tienes dolor de cuerpo?").toLocaleLowerCase();
+var sintomaFiebre = prompt ("Responde si/no ¿tienes temperatura?").toLocaleLowerCase();
+var temperatura = prompt ("Sí tu respuesta fue SI, ¿Cuál es tu temperatura?. Sí tu respuesta fue NO deja el campo vacío")
 
+if(sintomaCabeza == "si" && sintomaCuerpo == "si" && vacunas == "si" && sintomaFiebre == "no" && temperatura == ""){
+    document.write("Usted tiene 55% probabilidad de padecer COVID")
+}else if (vacunas == "si" && sintomaCabeza =="si" && sintomaCuerpo == "no" && sintomaFiebre == "si" && temperatura >"37"){
+    document.write (" Usted tiene 70% de probabilidad de tener COVID")}
+else if (vacunas == "si" && sintomaCabeza =="no" && sintomaCuerpo == "si" && sintomaFiebre == "si" && temperatura >"37"){
+        document.write (" Usted tiene 70% de probabilidad de tener COVID")
+}else if (vacunas =="si" && sintomaCabeza =="si" && sintomaCuerpo =="si" && sintomaFiebre == "si" && temperatura >"37"){
+    document.write ("Usted tiene 95% de probabilidad de tener COVID")
+}
