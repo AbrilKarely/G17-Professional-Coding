@@ -18,13 +18,13 @@
 
 // Estos puedes ser const porque son valores que no van a cambiar, si si cambian deben ser var o let//
 const producto1Nombre = "iphone"
-const producto1Precio = "120"
+const producto1Precio = 120
 
 const producto2Nombre = "tablet"
-const producto2Precio = "1250"
+const producto2Precio = 1250
 
 const producto3Nombre = "teclado"
-const producto3Precio = "19"
+const producto3Precio = 19
 
 // Tarea 1. Solicitar datos
 
@@ -34,7 +34,7 @@ let RFC;
 let pais;
 let producto;
 let impuesto;
-let costoproducto;
+let costoProducto;
 
 function solicitarDatos (){
     razonSocial = prompt ("Dame la razón social");
@@ -48,12 +48,17 @@ function solicitarDatos (){
 function elegirProducto (){
     producto = parseInt(prompt("¿Qué producto quieres comprar? Elige el número 1. Iphone 2. Tablet, 3. Teclado")); //1 2 3
     if (producto ==1){
-        impuesto 
-        return "El producto obtenido es un " + producto1Nombre + " con un valor de " + producto1Precio + "impuesto" + impuesto +  
+        impuesto = calcularImpuesto (producto1Precio)
+        costoProducto = calcularTotal (producto1Precio, impuesto);
+        return "El producto obtenido es un " + producto1Nombre + " con un valor de " + producto1Precio + "impuesto" + impuesto +  "total:" + costoProducto;
     } else if (producto ==2){
-        return "El producto obtenido es un " + producto2Nombre + " con un valor de " + producto2Precio 
+        impuesto = calcularImpuesto (producto2Precio);
+        costoProducto = calcularTotal (producto2Precio, impuesto);
+        return "El producto obtenido es un " + producto2Nombre + " con un valor de " + producto2Precio + "impuesto" + impuesto +  "total:" + costoProducto;
     } else if (producto ==3){
-        return "El producto obtenido es un " + producto3Nombre + " con un valor de " + producto3Precio 
+        impuesto = calcularImpuesto (producto3Precio);
+        costoProducto = calcularTotal (producto3Precio, impuesto);
+        return "El producto obtenido es un " + producto3Nombre + " con un valor de " + producto3Precio + "impuesto" + impuesto +  "total:" + costoProducto;
     } else {
         mostrarError ()
     }
@@ -91,3 +96,4 @@ function mostrarError(){
 // Ejecutar funciones
 
 solicitarDatos();
+mostrarResultado ();
