@@ -159,11 +159,11 @@ var sintomaFiebre = prompt ("Responde si/no ¿tienes temperatura?").toLocaleLowe
 var temperatura = prompt ("Sí tu respuesta fue SI, ¿Cuál es tu temperatura?. Sí tu respuesta fue NO deja el campo vacío")
 
 if(sintomaCabeza == "si" && sintomaCuerpo == "si" && vacunas == "si" && sintomaFiebre == "no" && temperatura == ""){
-    document.write("Usted tiene 55% probabilidad de padecer COVID")
+    document.write(nombre + " tiene 55% probabilidad de padecer COVID")
 }else if (vacunas == "si" && sintomaCabeza =="si" && sintomaCuerpo == "no" && sintomaFiebre == "si" && temperatura >"37"){
-    document.write (" Usted tiene 70% de probabilidad de tener COVID")}
+    document.write (nombre + " tiene 70% de probabilidad de tener COVID")}
 else if (vacunas == "si" && sintomaCabeza =="no" && sintomaCuerpo == "si" && sintomaFiebre == "si" && temperatura >"37"){
-        document.write (" Usted tiene 70% de probabilidad de tener COVID")
+        document.write (nombre + " tiene 70% de probabilidad de tener COVID")
 }else if (vacunas =="si" && sintomaCabeza =="si" && sintomaCuerpo =="si" && sintomaFiebre == "si" && temperatura >"37"){
-    document.write ("Usted tiene 95% de probabilidad de tener COVID")
+    document.write (nombre + " tiene 95% de probabilidad de tener COVID")
 }
