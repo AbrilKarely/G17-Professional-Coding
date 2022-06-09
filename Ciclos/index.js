@@ -41,3 +41,48 @@
     //i++; 
 //}//
 
+// Ejercicio 3, escribe un programa que realice la tabla de multiplicar del numero 3
+// 3 x 1 = 3
+// 3x 2 = 6
+
+
+//let i = 1
+
+//while (i<= 10){
+    //console.log ("3 x" , i , "=", 3*i);
+    //i++;
+//}//
+
+//segunda parte es repetir 3 veces la multiplicacion 
+
+//let j = 1
+//while (j<=3){
+//let i = 1
+//while (i<= 10){
+    //console.log ("3 x" , i , "=", 3*i);
+    //i++;
+    //}
+    //j++;
+//}//
+
+// crear un programa que pinte en consola un arbolito de navidad
+// *
+// **
+// ***
+// ****
+// *****
+
+
+let i = 0
+while (i <=5){
+    let string= ""
+    let j = 0
+    while (j<=i){
+        string += "*"
+        j++
+    }
+    i++
+    console.log(string)
+}
+
+
