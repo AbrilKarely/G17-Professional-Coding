@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(104, 25, 182);
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.inputForm{
+    width: 70%;
+}
+
+.error{
+    color: rgb(249, 235, 42);
+    font-family: sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.oculto{
+    display: none;
+}
