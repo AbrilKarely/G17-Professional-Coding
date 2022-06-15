@@ -1,0 +1,15 @@
+.full-viewport-height{
+    max-height: 100vh;
+}
+
+.ObjectFitContain{
+    object-fit: contain;
+}
+
+.full-width{
+    width: 100%;
+}
+
+body{
+    background-color: rgba(219, 235, 229, 0.946);
+}
