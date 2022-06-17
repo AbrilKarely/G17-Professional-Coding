@@ -3,4 +3,6 @@
 // sustituyendo los múltiplos de 3 por la palabra “fizz”, los múltiplos de 5 por “buzz” y los múltiplos de ambos, 
 // es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”.
 
-console.log ("hola desde node");
+for (let i= 100; i<= 199; i++){
+    console.log (i);
+}
