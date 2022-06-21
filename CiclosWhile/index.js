@@ -73,16 +73,34 @@
 // *****
 
 
-let i = 0
-while (i <=5){
-    let string= ""
-    let j = 0
-    while (j<=i){
-        string += "*"
-        j++
+// let i = 0
+// while (i <=5){
+//     let string= ""
+//     let j = 0
+//     while (j<=i){
+//         string += "*"
+//         j++
+//     }
+//     i++
+//     console.log(string)
+// }
+
+
+// Programa de facturas
+
+let flag = true // esta es la variable de escape para el while
+
+while (flag){
+    let rfc = prompt ("Dame tu rfc")
+    let nombre = prompt ("Dame tu nombre")
+    let correo = prompt ("mail")
+    let tele = prompt ("telefono")
+    let monto = parseInt(prompt("Monto"))
+    if (typeof(monto) == number && monto > 0 && monto != ""){
+        console.log ("tu factura es a nombre de", nombre , "con monto de" , monto , "con telefono", tele ) 
+        flag = false
+    } else {
+        console.log ("monto incorrecto, intenta nuevamente")
+        flag = true
     }
-    i++
-    console.log(string)
 }
-
-

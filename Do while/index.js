@@ -12,15 +12,26 @@
 
 // crear un programa que valide la contraseña de un login
 
-const correoValido = "abril@gmail.com"
-const contraValida = "Nube"
+// const correoValido = "abril@gmail.com"
+// const contraValida = "Nube"
 
-let correo; 
-let contra;
+// let correo; 
+// let contra;
+
+// do {
+//     correo = prompt ("Ingresa tu correo");
+//     contra = prompt ("Ingresa tu contraseña");
+
+// } while (correo!= correoValido && contra != contraValida);
+
+
+// Programa infinito para que te digan que si con do while
+
+
+let respuesta
 
 do {
-    correo = prompt ("Ingresa tu correo");
-    contra = prompt ("Ingresa tu contraseña");
+    respuesta = prompt ("¿Quieres ser mi novi@");
+    } while (respuesta != "si") // tener la condicion clara siempre para que pueda seguir preguntando
 
-} while (correo!= correoValido && contra != contraValida);
 
