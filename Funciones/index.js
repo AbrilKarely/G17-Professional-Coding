@@ -70,15 +70,15 @@
 
 // OTRO EJEMPLO //
 
-//const saborPrincipal = prompt ("Elige un sabor de pastel")
+// const saborPrincipal = prompt ("Elige un sabor de pastel")
 
-//function saborPastel(sabor1){
-    //if (sabor1 == "fresa" || sabor1 == "chocolate" || sabor1 == "almendra" || sabor1 == "vainilla"){
-        //document.write ("Elegiste el sabor " + saborPrincipal)
-    //}//
-//}//
+// function saborPastel(sabor1){
+//     if (sabor1 == "fresa" || sabor1 == "chocolate" || sabor1 == "almendra" || sabor1 == "vainilla"){
+//         document.write ("Elegiste el sabor " + saborPrincipal)
+//     }//
+// }//
 
-//saborPastel (saborPrincipal)
+// saborPastel (saborPrincipal)
 
 
 
