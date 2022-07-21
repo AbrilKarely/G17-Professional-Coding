@@ -145,7 +145,7 @@
 // 5.- Sintoma 2.- Dolor de cuerpo
 // 6.- Sintoma 3.- Temperatura   
 // Evaluar 
-// 1.- Si la persona tiene dolor de cabeza y dolor de cuerpo y esta vacunado y no presenta Fiebre, tendra un 55% probalidad de padecer covid.
+// 1.- Si la persona tiene dolor de cabeza y dolorw de cuerpo y esta vacunado y no presenta Fiebre, tendra un 55% probalidad de padecer covid.
 // 2.- Si la persona tiene dolor de cabeza o dolor de cuerpo y presenta una temperatura > 37.5  tiene una probabilidad de 70%
 // 3.- si presenta todos los sintomas  pues tiene un 95% 
 // considerar que fiebre se considera mayor a 37
