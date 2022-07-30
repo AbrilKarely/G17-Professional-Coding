@@ -179,8 +179,11 @@ function consultarSaldo() {
     const contentEl = document.createElement("div");
     appEl.appendChild(contentEl);
 
+    // ¿Cómo obtengo el saldo de la cuenta actual?
+    const saldoActual = store.selectedAccount.saldo
+
     const saldoActualEl = document.createElement("h1");
-    saldoActualEl.innerText = "Tu saldo actual es:";
+    saldoActualEl.innerText = "Tu saldo actual es: " + saldoActual;
     contentEl.appendChild(saldoActualEl);
 
     // boton de regresar
@@ -219,12 +222,54 @@ function ingresarMonto() {
     montoInputEl.setAttribute("id", "inputMonto");
     contentEl.appendChild(montoInputEl);
 
+    // Mensaje de error
+    const errorMessageEl = document.createElement("span");
+    errorMessageEl.innerText = "Error";
+    contentEl.appendChild(errorMessageEl);
+    errorMessageEl.setAttribute("style", "display:none");
 
     // boton de depositar
     const depoBtnEl = document.createElement("button");
     depoBtnEl.innerText = "Depositar";
     contentEl.appendChild(depoBtnEl);
     depoBtnEl.addEventListener("click", () => {
+        // Obtener el valor del input
+        const montoInputEl = document.getElementById("inputMonto");
+        const montoValue = Number(montoInputEl.value);
+
+        // Validaciones
+
+        // No es numero
+        if (!esNumero(montoValue)) {
+            // mostrar mensaje de error
+            errorMessageEl.innerText = "Ingresa un número valido";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+
+        // No es positivo, o es 0
+        if (montoValue <= 0) {
+            // Mostrar mensaje de error
+            errorMessageEl.innerText = "Ingresa un número mayor a 0";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+
+        // La cuenta no debe de exceder 990
+        const montoActual = store.selectedAccount.saldo
+        const nuevoSaldo = montoActual + montoValue;
+
+        if (nuevoSaldo > 990){
+            errorMessageEl.innerText = "Tu cuenta no debe exceder $990.00";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+
+        // Todas las validaciones pasaron, ahora ingresar el monto a la cuenta
+        // Asignar nuevo saldo a la cuenta seleccionada
+        store.selectedAccount.saldo = nuevoSaldo;
+        clearWindow();
+        mostrarOpciones();
     })
 
     // boton para salir 
@@ -291,4 +336,9 @@ function retirarMonto() {
         mostrarOpciones();
     })
 
+}
+
+
+function esNumero(numero) {
+    return !isNaN(numero)
 }
