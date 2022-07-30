@@ -10,7 +10,7 @@ const store = {
 
 function mostrarInicio() {
     const appEl = document.getElementById("app");
-    const contentEl = document.createElement ("div");
+    const contentEl = document.createElement("div");
     appEl.appendChild(contentEl);
 
     // mostrar mensaje de bienvenida
@@ -51,7 +51,7 @@ function mostrarInicio() {
     // mostrar botón de siguiente
     const nextbuttonEl = document.createElement("button");
     nextbuttonEl.innerText = "Siguiente";
-    nextbuttonEl.addEventListener ("click", () =>{
+    nextbuttonEl.addEventListener("click", () => {
         clearWindow();
         mostrarLogin();
     });
@@ -64,7 +64,7 @@ mostrarInicio();
 
 function mostrarLogin() {
     const appEl = document.getElementById("app");
-    const contentEl = document.createElement ("div");
+    const contentEl = document.createElement("div");
     appEl.appendChild(contentEl);
 
     // crear mensaje de bienvenida y el nombre de la persona que ingreso
@@ -73,17 +73,16 @@ function mostrarLogin() {
     contentEl.appendChild(bienvenidaUsuarioEl);
 
     // mostrar cuadro de contraseña
-    const passwordLabelEl = document.createElement ("label");
+    const passwordLabelEl = document.createElement("label");
     passwordLabelEl.innerText = "Ingresa tu contraseña";
     contentEl.appendChild(passwordLabelEl);
-    const passwordInputEl = document.createElement ("input");
+    const passwordInputEl = document.createElement("input");
     passwordInputEl.setAttribute("type", "password");
-    let userPassword;
-    passwordInputEl.setAttribute ("id" , "inputPassword");
+    passwordInputEl.setAttribute("id", "inputPassword");
     contentEl.appendChild(passwordInputEl);
 
     // mensaje de error
-    const errorMessageEl = document.createElement ("span")
+    const errorMessageEl = document.createElement("span")
     errorMessageEl.innerText = "Datos incorrectos";
     contentEl.appendChild(errorMessageEl);
 
@@ -91,7 +90,7 @@ function mostrarLogin() {
     const backButtonEl = document.createElement("button");
     backButtonEl.innerText = "Regresar";
     contentEl.appendChild(backButtonEl);
-    backButtonEl.addEventListener ("click" , () =>{
+    backButtonEl.addEventListener("click", () => {
         clearWindow();
         mostrarInicio();
     })
@@ -106,33 +105,33 @@ function mostrarLogin() {
 
         // 2. Comparar la contraseña del usuario con la contraseña
         //    de la cuenta seleccionada
-        if (store.selectedAccount.password == currentPassword){
+        if (store.selectedAccount.password == currentPassword) {
             // Si es válido, cambiar de pantalla
             clearWindow();
             mostrarOpciones();
-        } else { 
+        } else {
             // Si no es válido, mostrar mensaje de error
             console.log('Contraseña inválida')
-            
+
         }
     });
     contentEl.appendChild(loginButtonEl);
 }
 
 // funcion para borrar toda la pantalla
-function clearWindow (){
-    const appEl = document.getElementById ("app");
+function clearWindow() {
+    const appEl = document.getElementById("app");
     appEl.firstChild.remove();
 }
 
 
 // funcion para mostrar opciones 
-function mostrarOpciones (){
-    const appEl = document.getElementById ("app");
-    const contentEl = document.createElement ("div");
+function mostrarOpciones() {
+    const appEl = document.getElementById("app");
+    const contentEl = document.createElement("div");
     appEl.appendChild(contentEl);
 
-    const selectOptionEl = document.createElement ("h1");
+    const selectOptionEl = document.createElement("h1");
     selectOptionEl.innerText = "Selecciona una de las siguientes opciones";
     contentEl.appendChild(selectOptionEl);
 
@@ -140,98 +139,156 @@ function mostrarOpciones (){
     const ConsuSaldoBtn = document.createElement("button");
     ConsuSaldoBtn.innerText = "Consultar Saldo";
     contentEl.appendChild(ConsuSaldoBtn);
-    ConsuSaldoBtn.addEventListener("click", () =>{
+    ConsuSaldoBtn.addEventListener("click", () => {
+        clearWindow();
         consultarSaldo();
     })
 
-// Agregar boton de ingresar monto
+    // Agregar boton de ingresar monto
     const InMontoBtn = document.createElement("button");
     InMontoBtn.innerText = "Ingresa Monto";
     contentEl.appendChild(InMontoBtn);
-    InMontoBtn.addEventListener("click", () =>{
+    InMontoBtn.addEventListener("click", () => {
         clearWindow();
+        ingresarMonto();
     })
 
-// agregar boton de retirar monto
+    // agregar boton de retirar monto
     const RetiMontBtn = document.createElement("button");
     RetiMontBtn.innerText = "Retirar Monto";
     contentEl.appendChild(RetiMontBtn);
-    RetiMontBtn.addEventListener("click", () =>{
+    RetiMontBtn.addEventListener("click", () => {
         clearWindow();
-    })
+        retirarMonto();
+    });
 
     // agregar boton de salir
     const Salirbtn = document.createElement("button");
     Salirbtn.innerText = "Salir";
     contentEl.appendChild(Salirbtn);
-    Salirbtn.addEventListener("click", () =>{
+    Salirbtn.addEventListener("click", () => {
         clearWindow();
         mostrarInicio();
-    })
+    });
 
 }
 
 // funcion para consultar saldo
-function consultarSaldo (){
-    const appEl = document.getElementById ("app");
-    const contentEl = document.getElementById ("div");
-    appEl.appendChild (contentEl);
+function consultarSaldo() {
+    const appEl = document.getElementById("app");
+    const contentEl = document.createElement("div");
+    appEl.appendChild(contentEl);
 
-    const saldoActualEl = document.createElement ("h1");
+    const saldoActualEl = document.createElement("h1");
     saldoActualEl.innerText = "Tu saldo actual es:";
-    contentEl.appendChild (saldoActualEl);
+    contentEl.appendChild(saldoActualEl);
 
     // boton de regresar
     const botonRegresarEl = document.createElement("button");
     botonRegresarEl.innerText = "Regresar";
     contentEl.appendChild(botonRegresarEl);
-    botonRegresarEl.addEventListener ("click" , () =>{
+    botonRegresarEl.addEventListener("click", () => {
         clearWindow();
         mostrarOpciones();
-    })
+    });
 
-// boton de salir
+    // boton de salir
     const exitBtnEl = document.createElement("button");
     exitBtnEl.innerText = "Salir";
     contentEl.appendChild(exitBtnEl);
-    exitBtnEl.addEventListener("click", () =>{
+    exitBtnEl.addEventListener("click", () => {
         clearWindow();
     })
 }
 
 // funcion para ingresar monto
-function ingresarMonto (){
-    const appEl = document.getElementById ("app");
-    
+function ingresarMonto() {
+    const appEl = document.getElementById("app");
+    const contentEl = document.createElement("div");
+    appEl.appendChild(contentEl);
+
+    const montoDepo = document.createElement("h1");
+    montoDepo.innerText = "Selecciona el monto a depositar:";
+    contentEl.appendChild(montoDepo);
+
+    const montoLabelEl = document.createElement("label");
+    montoLabelEl.innerText = "Ingresa el monto a depositar";
+    contentEl.appendChild(montoLabelEl);
+    const montoInputEl = document.createElement("input");
+    montoInputEl.setAttribute("type", "number");
+    montoInputEl.setAttribute("id", "inputMonto");
+    contentEl.appendChild(montoInputEl);
+
+
+    // boton de depositar
+    const depoBtnEl = document.createElement("button");
+    depoBtnEl.innerText = "Depositar";
+    contentEl.appendChild(depoBtnEl);
+    depoBtnEl.addEventListener("click", () => {
+    })
+
+    // boton para salir 
+    const exitBtnEl = document.createElement("button");
+    exitBtnEl.innerText = "Salir";
+    contentEl.appendChild(exitBtnEl);
+    exitBtnEl.addEventListener("click", () => {
+        clearWindow();
+        mostrarInicio();
+    })
+
+
+    // boton para cancelar
+
+    const CancelBtn = document.createElement("button");
+    CancelBtn.innerText = "Cancelar";
+    contentEl.appendChild(CancelBtn);
+    CancelBtn.addEventListener("click", () => {
+        clearWindow();
+        mostrarOpciones();
+    })
 }
 
-
-
-// boton de depositar
-
-
-// boton para salir 
-
-
-// boton para cancelar
-
-
-
-
-
 // funcion para retirar monto
+function retirarMonto() {
+    const appEl = document.getElementById("app");
+    const contentEl = document.createElement("div");
+    appEl.appendChild(contentEl);
 
+    const retiMontoEl = document.createElement("h1");
+    retiMontoEl.innerText = "Selecciona el monto a retirar:";
+    contentEl.appendChild(retiMontoEl);
 
+    const retirarMontoLabelEl = document.createElement("label");
+    retirarMontoLabelEl.innerText = "Monto a retirar";
+    contentEl.appendChild(retirarMontoLabelEl);
+    const sacarMontoInputEl = document.createElement("input");
+    sacarMontoInputEl.setAttribute("type", "number");
+    sacarMontoInputEl.setAttribute("id", "inputMonto");
+    contentEl.appendChild(sacarMontoInputEl);
 
+    // boton de retirar
+    const retiBtnEl = document.createElement("button");
+    retiBtnEl.innerText = "Retirar Dinero";
+    contentEl.appendChild(retiBtnEl);
+    retiBtnEl.addEventListener("click", () => {
+    })
 
-// boton de retirar
+    // boton de salir
+    const exitBtnEl = document.createElement("button");
+    exitBtnEl.innerText = "Salir";
+    contentEl.appendChild(exitBtnEl);
+    exitBtnEl.addEventListener("click", () => {
+        clearWindow();
+        mostrarInicio();
+    })
 
+    // boton de cancelar
+    const CancelBtn = document.createElement("button");
+    CancelBtn.innerText = "Cancelar";
+    contentEl.appendChild(CancelBtn);
+    CancelBtn.addEventListener("click", () => {
+        clearWindow();
+        mostrarOpciones();
+    })
 
-
-// boton de salir
-
-
-// boton de cancelar
-
-
-
+}
