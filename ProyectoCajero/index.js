@@ -259,7 +259,7 @@ function ingresarMonto() {
         const montoActual = store.selectedAccount.saldo
         const nuevoSaldo = montoActual + montoValue;
 
-        if (nuevoSaldo > 990){
+        if (nuevoSaldo > 990) {
             errorMessageEl.innerText = "Tu cuenta no debe exceder $990.00";
             errorMessageEl.setAttribute("style", "display:initial");
             return;
@@ -311,11 +311,52 @@ function retirarMonto() {
     sacarMontoInputEl.setAttribute("id", "inputMonto");
     contentEl.appendChild(sacarMontoInputEl);
 
+    // Mensaje de error
+    const errorMessageEl = document.createElement("span");
+    errorMessageEl.innerText = "Error";
+    contentEl.appendChild(errorMessageEl);
+    errorMessageEl.setAttribute("style", "display:none");
+
     // boton de retirar
     const retiBtnEl = document.createElement("button");
     retiBtnEl.innerText = "Retirar Dinero";
     contentEl.appendChild(retiBtnEl);
     retiBtnEl.addEventListener("click", () => {
+        // Obtener el valor del input
+        const retirarMontoEl = document.getElementById("inputMonto");
+        const montoRetiradoActual = Number(retirarMontoEl.value);
+
+        // Validaciones
+        // No es numero
+        if (!esNumero(montoRetiradoActual)) {
+            // mostrar mensaje de error
+            errorMessageEl.innerText = "Ingresa un número valido";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+
+        // No es positivo, o es 0
+        if (montoRetiradoActual <= 0) {
+            // Mostrar mensaje de error
+            errorMessageEl.innerText = "Ingresa un número mayor a 0";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+        // La cuenta no debe tener menos de 10 pesos 
+        const montoActual = store.selectedAccount.saldo
+        const nuevoSaldoRetirado = montoActual - montoRetiradoActual;
+
+        if (nuevoSaldoRetirado < 10){
+            errorMessageEl.innerText = "Tu cuenta debe tener siempre $10.00, Ingresa otra cantidad";
+            errorMessageEl.setAttribute("style", "display:initial");
+            return;
+        }
+         // Todas las validaciones pasaron, ahora ingresar el monto a la cuenta
+        // Asignar nuevo saldo a la cuenta seleccionada
+        store.selectedAccount.saldo = nuevoSaldoRetirado;
+        clearWindow();
+        mostrarOpciones();
+        
     })
 
     // boton de salir
